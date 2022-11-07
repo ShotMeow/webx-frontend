@@ -1,5 +1,9 @@
-import styles from "../styles/Home.module.css";
+import React from "react";
+import { NextPage } from "next";
+import Layout from "../app/components/Layout/Layout";
 
-export default function Home() {
-  return <div className={styles.container}></div>;
-}
+const Home: NextPage = () => {
+  return <Layout></Layout>;
+};
+
+export default Home;
