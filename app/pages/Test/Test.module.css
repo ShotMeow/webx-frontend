@@ -2,6 +2,11 @@
     margin-top: 50px;
 }
 
+.bread {
+    color: var(--gray-color);
+    margin: 10px 0;
+}
+
 .info {
     display: grid;
     grid-template-columns: 5fr 2fr;
@@ -36,22 +41,6 @@
     display: flex;
     align-items: center;
     gap: 35px;
-}
-
-.startButton {
-    border: none;
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    width: 260px;
-    height: 50px;
-    border-radius: 10px;
-    font-size: 20px;
-    font-weight: 800;
-    transition: all 0.5s ease;
-}
-
-.startButton:hover {
-    background-color: #2C5BDE;
 }
 
 .favoriteButton {

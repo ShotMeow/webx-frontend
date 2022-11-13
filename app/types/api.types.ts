@@ -8,3 +8,10 @@ export interface ITest {
     rating: number;
     category: string;
 }
+
+export interface IQuestion {
+    id: string;
+    question: string;
+    option: string[];
+    correct_index: number;
+}

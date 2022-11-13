@@ -2,9 +2,11 @@
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .search {
+    width: 60%;
     position: relative;
 }
 
