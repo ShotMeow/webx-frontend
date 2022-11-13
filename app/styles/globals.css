@@ -1,15 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700;800&display=swap');
+
 :root {
     --primary-color: #4173FF;
     --secondary-color: #1E1E1E;
     --bg-color: #FAFDFF;
     --white-color: #FFF;
     --gray-color: #C6C6C6;
+
+    --category-design-color: #D01A3B;
+    --category-backend-color: #1BBD65;
+    --category-frontend-color: #197AD4;
 }
 
-body {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Nunito, sans-serif;
+}
+
+body {
     background-color: var(--bg-color);
 }
 
@@ -25,4 +35,9 @@ a {
 
 button {
     cursor: pointer;
+}
+
+.heading {
+    font-weight: 900;
+    font-size: 40px;
 }
