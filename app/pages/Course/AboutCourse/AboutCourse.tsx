@@ -11,7 +11,7 @@ const AboutCourse: FC<{course: ICourse; setStep: (step: number) => void}> = ({co
     return (
         <section className={styles.course}>
             <p className={styles.bread}>
-                <Link href={"../tests"}>Тесты</Link> {">"}{" "}
+                <Link href={"../courses"}>Курсы</Link> {">"}{" "}
                 <span>{course.title}</span>
             </p>
             <div className={styles.info}>
