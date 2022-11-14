@@ -1,6 +1,7 @@
 .layout {
+    height: 100%;
     display: grid;
-    grid-template-columns: 2fr 10fr;
+    grid-template-columns: 1fr 5fr;
 }
 
 .main {

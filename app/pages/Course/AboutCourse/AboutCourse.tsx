@@ -1,36 +1,33 @@
-import React, { FC } from "react";
-import styles from "../Test.module.css";
+import React, {FC} from 'react';
+import {ICourse} from "../../../types/api.types";
+import styles from "../Course.module.css";
 import Link from "next/link";
-import { RatingStar } from "rating-star";
+import {RatingStar} from "rating-star";
 import Button from "../../../components/Button/Button";
-import { AiOutlineHeart } from "react-icons/ai";
+import {AiOutlineHeart} from "react-icons/ai";
 import classNames from "classnames";
-import { ITest } from "../../../types/api.types";
 
-const AboutTest: FC<{ test: ITest; setStep: (step: number) => void }> = ({
-    test,
-    setStep,
-}) => {
+const AboutCourse: FC<{course: ICourse; setStep: (step: number) => void}> = ({course, setStep}) => {
     return (
-        <section className={styles.test}>
+        <section className={styles.course}>
             <p className={styles.bread}>
                 <Link href={"../tests"}>Тесты</Link> {">"}{" "}
-                <span>{test.title}</span>
+                <span>{course.title}</span>
             </p>
             <div className={styles.info}>
                 <div className={styles.about}>
-                    <h2 className={styles.heading}>{test.title}</h2>
-                    <p className={styles.description}>{test.description}</p>
+                    <h2 className={styles.heading}>{course.title}</h2>
+                    <p className={styles.description}>{course.description}</p>
                     <div className={styles.attrs}>
-                        <p>Сложность: {test.difficulty}</p>
+                        <p>Сложность: {course.difficulty}</p>
                         <div className={styles.rating}>
                             <RatingStar
-                                id={test.id}
+                                id={course.id}
                                 noBorder
                                 maxScore={5}
-                                rating={test.rating}
+                                rating={course.rating}
                             />
-                            <p>{test.rating} / 5.0</p>
+                            <p>{course.rating} / 5.0</p>
                         </div>
                     </div>
                     <div className={styles.wrapper}>
@@ -43,18 +40,18 @@ const AboutTest: FC<{ test: ITest; setStep: (step: number) => void }> = ({
                 <div className={styles.card}>
                     <img
                         className={styles.image}
-                        src={test.image}
-                        alt={test.title}
+                        src={course.image}
+                        alt={course.title}
                     />
                     <span
                         className={classNames({
                             [styles.category]: true,
-                            [styles.design]: test.category === "Design",
-                            [styles.backend]: test.category === "Backend",
-                            [styles.frontend]: test.category === "Frontend",
+                            [styles.design]: course.category === "Design",
+                            [styles.backend]: course.category === "Backend",
+                            [styles.frontend]: course.category === "Frontend",
                         })}
                     >
-                        {test.category}
+                        {course.category}
                     </span>
                 </div>
             </div>
@@ -62,4 +59,4 @@ const AboutTest: FC<{ test: ITest; setStep: (step: number) => void }> = ({
     );
 };
 
-export default AboutTest;
+export default AboutCourse;
