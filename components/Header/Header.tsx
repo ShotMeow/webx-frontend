@@ -1,14 +1,19 @@
 import React, { FC } from "react";
 
-import styles from "./Header.module.scss";
 import Search from "./Search/Search";
-import Actions from "./Actions/Actions";
+import Widgets from "./Widgets/Widgets";
+
+import styles from "./Header.module.scss";
+import Profile from "./Profile/Profile";
 
 const Header: FC = () => {
     return (
         <header className={styles.header}>
             <Search />
-            <Actions />
+            <div className={styles.actions}>
+                <Widgets />
+                <Profile />
+            </div>
         </header>
     );
 };

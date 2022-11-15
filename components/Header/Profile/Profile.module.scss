@@ -1,0 +1,11 @@
+.profile {
+    @apply flex items-center gap-4 text-tiny font-bold;
+
+    > div {
+        @apply bg-black p-4 rounded-lg;
+
+        > svg {
+            @apply stroke-white fill-white;
+        }
+    }
+}

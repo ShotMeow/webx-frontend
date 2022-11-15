@@ -1,15 +1,17 @@
 .search {
     @apply relative;
-}
+    max-width: 746px;
+    width: 90%;
 
-.search > svg {
-    @apply absolute left-5 stroke-primary;
-}
+    > svg {
+        @apply absolute left-5 top-4 stroke-primary;
+    }
 
-.search > input {
-    @apply py-3 pl-14 shadow rounded-lg w-full outline-none text-sm;
-}
+    > input {
+        @apply py-3 pl-14 shadow rounded-lg w-full outline-none text-sm;
 
-.search > input::placeholder {
-    @apply text-sm text-light-gray;
+        &::placeholder {
+            @apply text-sm text-light-gray;
+        }
+    }
 }
