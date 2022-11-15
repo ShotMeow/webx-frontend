@@ -1,0 +1,15 @@
+.search {
+    @apply relative;
+}
+
+.search > svg {
+    @apply absolute left-5 stroke-primary;
+}
+
+.search > input {
+    @apply py-3 pl-14 shadow rounded-lg w-full outline-none text-sm;
+}
+
+.search > input::placeholder {
+    @apply text-sm text-light-gray;
+}

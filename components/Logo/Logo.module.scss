@@ -1,0 +1,11 @@
+.logo {
+    @apply flex items-center gap-2;
+}
+
+.logo > h1 {
+    @apply text-base font-bold;
+}
+
+.logo > h1 > span {
+    @apply text-primary;
+}
