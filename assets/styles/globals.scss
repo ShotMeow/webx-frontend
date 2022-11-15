@@ -21,3 +21,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 5fr;
 }
+
+.main {
+    @apply mx-12;
+}

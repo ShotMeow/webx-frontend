@@ -9,9 +9,9 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => {
             <body>
                 <div className="wrapper">
                     <Aside />
-                    <div>
+                    <div className="main">
                         <Header />
-                        <main>{children}</main>
+                        {children}
                     </div>
                 </div>
             </body>

@@ -1,0 +1,42 @@
+.card {
+    @apply shadow;
+
+    > .top {
+        @apply relative;
+
+        > .category {
+            @apply bg-black text-white rounded-lg w-28 py-1 text-center absolute top-4 left-4;
+            &.frontend {
+                @apply bg-frontend;
+            }
+
+            &.backend {
+                @apply bg-backend;
+            }
+
+            &.design {
+                @apply bg-design;
+            }
+        }
+
+        > .image {
+            @apply rounded-t-lg h-72 object-cover;
+        }
+    }
+
+    > .bottom {
+        @apply bg-white flex flex-col gap-4 p-4 rounded-b-lg;
+
+        > .title {
+            @apply text-tiny font-bold;
+        }
+
+        > .author {
+            @apply text-gray;
+        }
+
+        > .difficulty {
+            @apply flex items-center gap-2 font-medium;
+        }
+    }
+}
