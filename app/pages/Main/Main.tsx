@@ -1,8 +1,7 @@
-import React, {FC} from 'react';
-import {ITest} from "../../types/api.types";
-import styles from './Main.module.css';
+import React, { FC } from "react";
+import styles from "./Main.module.css";
 
-const Main: FC<{tests: ITest[]}> = ({tests}) => {
+const Main: FC = () => {
     return (
         <div className={styles.main}>
             <section>

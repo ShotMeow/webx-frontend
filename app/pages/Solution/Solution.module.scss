@@ -1,0 +1,59 @@
+.solution {
+    @apply my-6;
+    > .header {
+        @apply flex justify-between;
+
+        > .about {
+            > p {
+                @apply text-gray;
+            }
+        }
+
+        > p {
+            @apply text-tiny flex gap-2;
+
+            > span {
+                @apply font-bold ml-6;
+            }
+        }
+    }
+
+    > .question {
+        @apply my-6;
+        > h3 {
+            @apply w-2/4;
+        }
+
+        > .border {
+            @apply w-1/6 bg-light-gray my-4;
+            height: 2px;
+        }
+
+        > ul {
+            @apply flex flex-col gap-6 my-8;
+            > li {
+                @apply text-tiny font-semibold;
+
+                > button {
+                    @apply py-2 px-6;
+                    &.active,
+                    &:hover {
+                        @apply bg-primary text-white rounded-lg;
+                    }
+                }
+            }
+        }
+    }
+}
+.total {
+    @apply my-6;
+    > h4 {
+        @apply mb-4;
+    }
+    > h3 {
+        @apply w-4/6 mb-12;
+    }
+    > .metric {
+        @apply text-tiny flex gap-20 font-bold mb-12;
+    }
+}

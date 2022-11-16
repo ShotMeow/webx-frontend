@@ -7,3 +7,10 @@ export interface ITest {
     difficulty: string;
     category: string;
 }
+
+export interface IQuestion {
+    id: string;
+    name: string;
+    variants: string[];
+    current: number;
+}

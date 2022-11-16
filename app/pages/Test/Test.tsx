@@ -25,7 +25,9 @@ const Test: FC<Props> = ({ test }) => {
                     Сложность: {test.difficulty}
                 </p>
                 <div className={styles.actions}>
-                    <Button primary>Начать</Button>
+                    <Link href={`./${test.id}/solution`}>
+                        <Button primary>Начать</Button>
+                    </Link>
                     <Button>
                         <MdOutlineFavoriteBorder size={24} />В избранное
                     </Button>

@@ -7,15 +7,16 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
     primary?: boolean;
 }
 
-const Button: FC<PropsWithChildren<Props>> = ({ primary, children }) => {
+const Button: FC<PropsWithChildren<Props>> = (props) => {
     return (
         <button
             className={classNames({
                 [styles.button]: true,
-                [styles.primary]: primary,
+                [styles.primary]: props.primary,
             })}
+            {...props}
         >
-            {children}
+            {props.children}
         </button>
     );
 };

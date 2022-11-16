@@ -1,4 +1,3 @@
-
 import { initializeApp } from "firebase/app";
 import {
     collection,
@@ -7,7 +6,7 @@ import {
     getDocs,
     getFirestore,
 } from "@firebase/firestore";
-import {ITest} from "../types/api.types";
+import { IQuestion, ITest } from "../types/api.types";
 
 initializeApp({
     apiKey: "AIzaSyAPvRMauejBnIZH2nfompU_jArlw8FP3Mg",
@@ -42,7 +41,6 @@ export const getTestsCollections = async (): Promise<ITest[]> => {
     return tests;
 };
 
-
 export const getTestCollectionById = async (id: string): Promise<ITest> => {
     const db = getFirestore();
 
@@ -66,4 +64,31 @@ export const getTestCollectionById = async (id: string): Promise<ITest> => {
     }
 
     return test;
+};
+
+export const getQuestionCollectionsFromTestCollection = async (
+    id: string
+): Promise<IQuestion[]> => {
+    const db = getFirestore();
+
+    const questions: IQuestion[] = [];
+
+    try {
+        const querySnapshot = await getDocs(
+            collection(doc(db, "tests", id), "questions")
+        );
+
+        querySnapshot.forEach((doc) => {
+            const data = doc.data() as Omit<IQuestion, "id">;
+
+            questions.push({
+                id: doc.id,
+                ...data,
+            });
+        });
+    } catch (error) {
+        return Promise.reject(error);
+    }
+
+    return questions;
 };
