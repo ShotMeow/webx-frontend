@@ -1,0 +1,9 @@
+.layout {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.main {
+    margin: 0 60px;
+}

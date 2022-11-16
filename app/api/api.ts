@@ -1,6 +1,18 @@
+<<<<<<< HEAD
 import { initializeApp } from "@firebase/app";
 import {collection, doc, getDoc, getDocs, getFirestore} from "@firebase/firestore";
 import { ITest } from "../types/api.types";
+=======
+import { initializeApp } from "firebase/app";
+import {
+    collection,
+    doc,
+    getDoc,
+    getDocs,
+    getFirestore,
+} from "@firebase/firestore";
+import {ICourse, ITest} from "../types/api.types";
+>>>>>>> a58668ef10c8025c9a506bcad0b7a011075a1f94
 
 initializeApp({
     apiKey: "AIzaSyAPvRMauejBnIZH2nfompU_jArlw8FP3Mg",
@@ -59,4 +71,56 @@ export const getTestCollectionById = async (id: string): Promise<ITest> => {
     }
 
     return test;
+<<<<<<< HEAD
 }
+=======
+};
+
+export const getCourses = async (): Promise<ICourse[]> => {
+    const db = getFirestore();
+
+    const courses: ICourse[] = [];
+
+    try {
+        const querySnapshot = await getDocs(collection(db, "courses"));
+
+        querySnapshot.forEach((doc) => {
+            const data = doc.data() as Omit<ICourse, "id">;
+
+            courses.push({
+                id: doc.id,
+                ...data,
+            });
+        });
+    } catch (error) {
+        return Promise.reject(error);
+    }
+
+    return courses;
+};
+
+export const getCourseById = async (id: string): Promise<ICourse> => {
+    const db = getFirestore();
+
+    let course: ICourse | null = null;
+
+    try {
+        const docRef = doc(db, "courses", id);
+        const docSnap = await getDoc(docRef);
+
+        if (docSnap.exists()) {
+            const data = docSnap.data() as Omit<ICourse, "id">;
+            course = {
+                id: docSnap.id,
+                ...data,
+            };
+        } else {
+            return Promise.reject("Курс не найден");
+        }
+    } catch (error) {
+        return Promise.reject(error);
+    }
+
+    return course;
+};
+>>>>>>> a58668ef10c8025c9a506bcad0b7a011075a1f94
