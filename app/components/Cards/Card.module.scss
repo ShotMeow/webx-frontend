@@ -1,0 +1,25 @@
+.card {
+    > .top {
+        @apply relative;
+
+        > .image {
+            @apply rounded-t-xl h-48 w-full object-cover;
+        }
+    }
+
+    > .bottom {
+        @apply shadow bg-white flex flex-col gap-4 p-4 rounded-b-xl;
+
+        > .title {
+            @apply text-tiny font-bold;
+        }
+
+        > .author {
+            @apply text-gray;
+        }
+
+        > .difficulty {
+            @apply flex items-center gap-2 font-medium;
+        }
+    }
+}

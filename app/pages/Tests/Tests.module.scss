@@ -1,0 +1,13 @@
+.tests {
+    @apply my-6;
+
+    > h2 {
+        @apply text-xl font-bold;
+    }
+
+    > .container {
+        @apply gap-16;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

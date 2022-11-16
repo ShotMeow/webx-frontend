@@ -1,15 +1,21 @@
 import React, { FC } from "react";
-import TestCard from "../../components/TestCard/TestCard";
 import { ITest } from "../../types/api.types";
-import styles from "./Tests.module.css";
+import TestCard from "../../components/Cards/TestCard/TestCard";
 
-const Tests: FC<{ tests: ITest[] }> = ({ tests }) => {
+import styles from "./Tests.module.scss";
+
+interface Props {
+    tests: ITest[];
+}
+
+const Tests: FC<Props> = ({ tests }) => {
     return (
-        <section>
-            <h2 className={styles.heading}>Тесты</h2>
-            <div className={styles.tests}>
-                {tests &&
-                    tests.map((test) => <TestCard test={test} key={test.id} />)}
+        <section className={styles.tests}>
+            <h2>Тесты</h2>
+            <div className={styles.container}>
+                {tests.map((test) => (
+                    <TestCard key={test.id} test={test} />
+                ))}
             </div>
         </section>
     );

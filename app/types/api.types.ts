@@ -3,11 +3,12 @@ export interface ITest {
     title: string;
     image: string;
     description: string;
-    developer: string;
+    author: string;
     difficulty: string;
-    rating: number;
     category: string;
 }
+<<<<<<< HEAD
+=======
 
 export interface IQuestion {
     id: string;
@@ -31,3 +32,4 @@ export interface ICourse {
         require: string;
     }
 }
+>>>>>>> a58668ef10c8025c9a506bcad0b7a011075a1f94

@@ -1,0 +1,14 @@
+.menu > ul {
+    @apply flex flex-col items-center text-tiny gap-8;
+
+    > li > a {
+        @apply block w-52 text-center py-2 rounded-lg transition-all;
+        &:hover {
+            @apply bg-primary text-white;
+        }
+
+        &.active {
+            @apply bg-primary text-white;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.widget {
+    @apply rounded-lg bg-white flex items-center justify-center p-4 shadow transition duration-500;
+
+    > svg {
+        @apply transition duration-300;
+    }
+
+    &:hover {
+        @apply bg-primary;
+
+        > svg {
+            @apply fill-white;
+        }
+    }
+}

@@ -1,16 +1,19 @@
 import React, { FC } from "react";
-import styles from "./Header.module.css";
-import { AiOutlineSearch } from "react-icons/ai";
-import User from "./User/User";
+
+import Search from "./Search/Search";
+import Widgets from "./Widgets/Widgets";
+
+import styles from "./Header.module.scss";
+import Profile from "./Profile/Profile";
 
 const Header: FC = () => {
     return (
         <header className={styles.header}>
-            <div className={styles.search}>
-                <AiOutlineSearch size={25} />
-                <input type="text" placeholder="Поиск..." />
+            <Search />
+            <div className={styles.actions}>
+                <Widgets />
+                <Profile />
             </div>
-            <User />
         </header>
     );
 };

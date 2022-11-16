@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    @apply text-black;
+}
+
+html,
+body,
+#__next,
+.wrapper {
+    @apply h-full;
+}
+
+body {
+    @apply bg-background;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.main {
+    @apply mx-12;
+}
+
+h2 {
+    @apply text-xl font-bold;
+}
+
+h3 {
+    @apply text-lg font-bold;
+}

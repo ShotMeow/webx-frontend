@@ -1,10 +1,23 @@
 import React, { ButtonHTMLAttributes, FC, PropsWithChildren } from "react";
-import styles from "./Button.module.css";
+import classNames from "classnames";
 
-interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {}
+import styles from "./Button.module.scss";
 
-const Button: FC<PropsWithChildren<Props>> = ({ children }) => {
-    return <button className={styles.button}>{children}</button>;
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
+    primary?: boolean;
+}
+
+const Button: FC<PropsWithChildren<Props>> = ({ primary, children }) => {
+    return (
+        <button
+            className={classNames({
+                [styles.button]: true,
+                [styles.primary]: primary,
+            })}
+        >
+            {children}
+        </button>
+    );
 };
 
 export default Button;

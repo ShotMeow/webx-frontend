@@ -1,15 +1,14 @@
 import React, { FC, PropsWithChildren } from "react";
-import styles from "./Layout.module.css";
-import Header from "./Header/Header";
 import Aside from "./Aside/Aside";
+import Header from "./Header/Header";
 
 const Layout: FC<PropsWithChildren> = ({ children }) => {
     return (
-        <div className={styles.layout}>
+        <div className="wrapper">
             <Aside />
-            <div className={styles.main}>
+            <div className="main">
                 <Header />
-                <main>{children}</main>
+                {children}
             </div>
         </div>
     );
