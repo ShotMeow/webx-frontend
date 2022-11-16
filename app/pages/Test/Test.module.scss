@@ -1,0 +1,33 @@
+.test {
+    @apply my-6 flex items-start gap-10;
+
+    .bread {
+        @apply text-gray;
+    }
+
+    .heading {
+        @apply mb-4;
+    }
+
+    .description {
+        @apply text-sm mb-6;
+    }
+
+    .difficulty {
+        @apply font-medium;
+    }
+
+    .actions {
+        @apply flex items-center gap-6 my-6;
+    }
+
+    .image {
+        @apply block relative shadow;
+        min-width: 440px;
+        min-height: 200px;
+
+        > img {
+            @apply rounded-lg object-cover w-full h-full;
+        }
+    }
+}

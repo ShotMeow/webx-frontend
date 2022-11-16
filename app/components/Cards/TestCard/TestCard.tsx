@@ -6,6 +6,7 @@ import classNames from "classnames";
 
 import { IoExtensionPuzzleOutline } from "react-icons/io5";
 import Link from "next/link";
+import Category from "../../Category/Category";
 
 interface Props {
     test: ITest;
@@ -16,16 +17,7 @@ const TestCard: FC<Props> = ({ test }) => {
         <Link href={`./tests/${test.id}`}>
             <article className={styles.card}>
                 <header className={styles.top}>
-                    <span
-                        className={classNames({
-                            [styles.category]: true,
-                            [styles.frontend]: test.category === "Frontend",
-                            [styles.backend]: test.category === "Backend",
-                            [styles.design]: test.category === "Design",
-                        })}
-                    >
-                        {test.category}
-                    </span>
+                    <Category category={test.category} />
                     <img
                         className={styles.image}
                         src={test.image}

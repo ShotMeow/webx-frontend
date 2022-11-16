@@ -1,0 +1,12 @@
+.button {
+    @apply flex justify-center items-center gap-2 text-sm font-bold;
+}
+
+.primary {
+    @apply bg-primary text-white rounded-lg w-80 h-14 text-tiny transition-all;
+
+    &:hover,
+    &:focus {
+        @apply bg-primary-active;
+    }
+}

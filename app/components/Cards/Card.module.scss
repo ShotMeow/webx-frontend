@@ -2,21 +2,6 @@
     > .top {
         @apply relative;
 
-        > .category {
-            @apply bg-black text-white rounded-xl w-32 py-1 text-center absolute top-4 left-4;
-            &.frontend {
-                @apply bg-frontend;
-            }
-
-            &.backend {
-                @apply bg-backend;
-            }
-
-            &.design {
-                @apply bg-design;
-            }
-        }
-
         > .image {
             @apply rounded-t-xl h-48 w-full object-cover;
         }
