@@ -62,6 +62,7 @@ const Solution: FC<Props> = ({ title, questions }) => {
                         Поздравляем! Вы ответили правильно на {trueAnswers} из{" "}
                         {questions.length}
                     </h3>
+                    <p className={styles.result}>Ваш оценочный балл <span>{((100 + trueAnswers) / time * 10).toFixed(1)}</span></p>
                     <div className={styles.metric}>
                         <p>
                             Точность ответов составляет{" "}

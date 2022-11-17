@@ -56,4 +56,12 @@
     > .metric {
         @apply text-tiny flex gap-20 font-bold mb-12;
     }
+
+    .result {
+        @apply text-lg font-medium my-10;
+
+        > span {
+            @apply font-bold;
+        }
+    }
 }
