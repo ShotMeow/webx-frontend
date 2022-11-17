@@ -1,4 +1,8 @@
 .card {
+    @apply transition duration-500;
+    &:hover {
+        transform: scale(1.02);
+    }
     > .top {
         @apply relative;
 

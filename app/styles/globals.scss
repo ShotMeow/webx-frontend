@@ -39,3 +39,14 @@ h3 {
 h4 {
     @apply text-tiny font-bold;
 }
+
+.swiper-button-prev, .swiper-button-next {
+    @apply bg-white rounded-full shadow;
+    width: 60px !important;
+    height: 60px !important;
+    color: #1E1E1E !important;
+
+    &::after {
+        transform: scale(0.5);
+    }
+}
