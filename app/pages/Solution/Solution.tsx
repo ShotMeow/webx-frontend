@@ -86,14 +86,14 @@ const Solution: FC<Props> = ({ title, questions }) => {
                                 {current} вопрос из {questions.length}
                             </p>
                         </div>
-                        <p>
+                        <span>
                             Прошло времени:{" "}
                             <Timer time={time} setTime={setTime} />
-                        </p>
+                        </span>
                     </div>
                     <div className={styles.question}>
                         <h3>{question.name}</h3>
-                        <div className={styles.border}></div>
+                        <div className={styles.border} />
                         <ul>
                             {question.variants.map((variant, id) => (
                                 <li key={variant}>

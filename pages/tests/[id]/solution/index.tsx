@@ -30,7 +30,7 @@ const SolutionPage: NextPage = () => {
                     </Head>
                     <Solution
                         title={test.title}
-                        questions={arrayShuffleHelper(questions)}
+                        questions={arrayShuffleHelper(questions).slice(0, 5)}
                     />
                 </>
             )}
