@@ -25,7 +25,7 @@ body {
 }
 
 .main {
-    @apply mx-12;
+    @apply mx-12 flex flex-col justify-between;
 }
 
 h2 {

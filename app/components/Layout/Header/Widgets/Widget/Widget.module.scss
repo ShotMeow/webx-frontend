@@ -12,12 +12,4 @@
             @apply fill-white;
         }
     }
-
-    &:focus {
-        @apply bg-primary-active;
-
-        > svg {
-            @apply fill-white;
-        }
-    }
 }

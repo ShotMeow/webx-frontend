@@ -5,8 +5,7 @@
 .primary {
     @apply bg-primary text-white rounded-lg w-80 h-14 text-tiny transition-all;
 
-    &:hover,
-    &:focus {
+    &:hover {
         @apply bg-primary-active;
     }
 }

@@ -1,0 +1,15 @@
+.socials {
+    @apply flex gap-4;
+    > li {
+        > a {
+            > svg {
+                @apply transition-all;
+            }
+            &:hover {
+                > svg {
+                    @apply fill-primary;
+                }
+            }
+        }
+    }
+}
